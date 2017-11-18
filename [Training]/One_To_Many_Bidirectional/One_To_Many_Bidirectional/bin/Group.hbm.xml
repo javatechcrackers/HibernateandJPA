@@ -1,0 +1,26 @@
+﻿<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="com.igate.entity.Group" table="GroupTableBi">
+        <id name="id" >
+             <generator class="increment"/>
+        </id>
+    
+        <set name="students" cascade="all" inverse="true" fetch="select">
+             <key column="parent_id"/>
+             <one-to-many class="com.igate.entity.Student"/>
+        </set>
+        <property name="name" type="string"/>
+    </class>
+    
+    <class name="com.igate.entity.Student" table="StudentBi">
+        <id name="id" >
+             <generator class="increment"/>
+        </id>
+        <property name="info"/>
+        <many-to-one name="parent" column="parent_id" not-null="true"/>
+    </class>
+</hibernate-mapping>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<!-- Package name which contains the domain classes -->
+<hibernate-mapping package="com.igate.entity">
+
+	<!-- Name of the table which maps to the respective class -->
+	<class name="Student" table="Student">
+	
+		<meta attribute="class-description">
+		This class contains the details of the Student
+		</meta>
+		
+		
+		<!-- id element maps to the primary key column in the table -->
+		<id name="studentId" type="int" column="student_id">
+		
+				<!-- generator element specifies the strategy used to generate the primary key. 
+              		Possible values are native, identity, sequence, increment -->
+				<generator class="assigned"/>		
+		</id>
+	
+		
+		<!-- Other columns of the table are mapped to the attributes of the class using property element -->
+		<property name="studentName" type="string" column="student_name" not-null="true" />
+		<property name="studentMarks" type="double" column="student_marks" not-null="true" />
+		
+		<property name="gender" type="string" length="10" column="gender"/>	
+		
+		</class>
+	
+		
+		
+	
+</hibernate-mapping>

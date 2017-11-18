@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.USER_LIBRARY/Hibernate"/>
+	<classpathentry kind="lib" path="E:/Jars/Spring/Spring Jar Kausik/commons-logging-1.1.1.jar"/>
+	<classpathentry kind="lib" path="hibernate-commons-annotations-4.0.2.Final.jar"/>
+	<classpathentry kind="lib" path="jboss-logging-3.1.0.GA.jar"/>
+	<classpathentry kind="lib" path="cglib-2.1.95.jar"/>
+	<classpathentry kind="lib" path="asm-3.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/JavaSE-1.6">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="E:/Jars/Hibernate/hibernate-3.6.1.jar"/>
+	<classpathentry kind="lib" path="hibernate-annotations-3.5.0-final.jar"/>
+	<classpathentry kind="lib" path="postgresql-9.4.1208.jre6.jar"/>
+	<classpathentry kind="lib" path="slf4j-log4j12-1.6.6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>

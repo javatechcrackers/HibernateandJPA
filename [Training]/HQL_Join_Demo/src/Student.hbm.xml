@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<!-- Package name which contains the domain classes -->
+<hibernate-mapping package="com.igate.entity">
+
+
+<class name="com.igate.entity.Student" table="STUDENTS" lazy="false">
+	<id name="id" column="STUDENT_ID"> <generator class="native" /> </id>
+	<property name="studentName" column="STUDENT_NAME" />
+	<set name="courses" table="STUDENT_COURSE" lazy="false" cascade="save-update"> 
+	<key column="STUDENT_ID" not-null="true" /> 
+	<many-to-many class="com.igate.entity.Course" column="COURSE_ID" />
+	</set> 
+</class>
+
+
+<class name="com.igate.entity.Course" table="COURSES" lazy="false"> 
+<id name="id" column="COURSE_ID"> <generator class="native" /> </id>
+<property name="courseName" column="COURSE_NAME" /> 
+</class>
+
+
+</hibernate-mapping>
+
+<!-- <set> refers the to-many association and also declares the collection table.
+ cascase declares that inserting the objects will be taken care by the Student entity. 
+ <key> refers the foreign key column of the collection table. 
+ <many-to-many> declares the many-to-many association
+-->

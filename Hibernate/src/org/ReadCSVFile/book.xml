@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Monitor>
+	<declares>
+		<declare id="id" type="headerindex">id</declare>
+		<declare id="name" type="headerindex">NAME</declare>
+		<declare id="dept" type="headerindex">dept</declare>
+	</declares>
+	<queries>
+		<query>
+			<default_ />
+		</query>
+		<query>
+			<default_ />
+		</query>
+		<query>
+			<default_ />
+		</query>
+	</queries>
+</Monitor>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<!-- Package name which contains the domain classes -->
+<hibernate-mapping package="com.igate.entity">
+
+<class name="Student" abstract="true"> 
+	<id name="id"> 
+		<generator class="assigned"></generator> 
+	</id> 
+	<property name="name"></property>
+	 
+	<union-subclass name="FulltimeStudent" table="table_fulltime"> 
+	<property name="years"></property> 
+	</union-subclass>
+	 
+	<union-subclass name="ParttimeStudent" table="table_parttime"> 
+	<property name="hours"></property> 
+	</union-subclass> 
+</class> 
+	
+</hibernate-mapping>

@@ -1,0 +1,13 @@
+diskPersistent="false"
+In this example, 
+the diskStore property sets the location of the disk cache store.
+ Then, the listing declares two caches. 
+ The defaultCache element contains the settings for all cached objects that don't have a 
+ specific cache element: the number of cached objects held in memory, 
+ whether objects in the  cache expire (if eternal is true , then objects don't expire), 
+ the number of seconds an object should remain the cache after it was last accessed, 
+ the number of seconds an object should remain in the cache after it was created,
+  and whether objects exceeding maxElementsInMemory should be spooled to the diskStore.
+   Next, for custom settings based on the class, 
+   the code defines a cache element with the fully qualified class name listed in the name attribute.
+    (

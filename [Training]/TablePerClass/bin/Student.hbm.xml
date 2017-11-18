@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<!-- Package name which contains the domain classes -->
+<hibernate-mapping package="com.igate.entity">
+
+<class name="Student" table="table_student">
+         <id name="id">
+                <generator class="native"/>
+         </id>
+          <discriminator column="type" type="string"/>
+          <property name="name"/>
+          
+          <subclass name="FulltimeStudent" discriminator-value="Full">
+         	 <property name="years"/>
+          </subclass>
+          
+          <subclass name="ParttimeStudent" discriminator-value="Part">
+              <property name="hours"/>
+           </subclass>
+</class> 
+	
+</hibernate-mapping>
